@@ -233,10 +233,11 @@ class Terminal:
             new_directory = Directory(directory, self.current_directory)
             now = datetime.datetime.now()
             new_directory.creation_date = now.strftime("%b %d %H:%M")
-            permissions = "drwxr-xr-x"  
+            Directory.permissions = "rwxr-xr-x"  
+            a = Directory.permissions
             self.current_directory.add_subdirectory(new_directory)
             print(
-                f"Directory created. Permissions: {permissions}, Creation Date: {new_directory.creation_date}"
+                f"Directory created. Permissions: d{a}, Creation Date: {new_directory.creation_date}"
             )
 
     def touch(self, filename):
