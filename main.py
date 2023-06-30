@@ -1,13 +1,14 @@
 import datetime
 import re
-# import getpass
+import getpass
 
 class Directory:
-    def __init__(self, name, parent=None):
+    def __init__(self, name, parent=None, permissions = None):
         self.name = name
         self.parent = parent
         self.subdirectories = []
         self.files = []
+        self.permissions = permissions
 
     def add_subdirectory(self, directory):
         self.subdirectories.append(directory)
@@ -18,12 +19,12 @@ class Directory:
         self.files.append(file)
 
 class File:
-    def __init__(self, name):
+    def __init__(self, name, permissions = None):
         self.name = name
         self.contents = ""
         now = datetime.datetime.now()
         self.creation_date = now.strftime("%b %d %H:%M")
-        self.permissions = "-rw-r--r--"
+        self.permissions = permissions
 
     def append(self, content):
         self.contents += content
@@ -149,19 +150,17 @@ class Terminal:
             if option == "-l":
 
                 creation_date = directory.creation_date
-                Directory.permissions = "drwxr-xr-x"
                 permissions = Directory.permissions 
-                print(f"{permissions}\t{owner}\t{creation_date}\t{directory.name}/")
+                print(f"d{permissions}\t{owner}\t{creation_date}\t{directory.name}/")
             else:
                 print(directory.name + "/")
 
         for file in files:
             if option == "-l":
 
-                creation_date = file.creation_date
-                File.permissions = "-rw-r--r--"  
+                creation_date = file.creation_date  
                 permissions = File.permissions
-                print(f"{permissions}\t{owner}\t{creation_date}\t{file.name}")
+                print(f"-{permissions}\t{owner}\t{creation_date}\t{file.name}")
             else:
                 print(file.name)
 
@@ -250,8 +249,9 @@ class Terminal:
             self.current_directory.add_file(new_file)
             now = datetime.datetime.now()
             new_file.creation_date = now.strftime("%b %d %H:%M")
-            permissions = "-rw-r--r--"  
-            print(f"File created. Permissions: {permissions}, Creation Date: {new_file.creation_date}")
+            File.permissions = '-rw-r--r--'  
+            a = File.permissions
+            print(f"File created. Permissions: {a}, Creation Date: {new_file.creation_date}")
 
     def vim(self, filename):
         for file in self.current_directory.files:
@@ -282,21 +282,26 @@ class Terminal:
         if file is None:
             print("File not found.")
             return
-    
-        permissions = file.permissions
-    
+        #etet file e uremn
+        permissions = File.permissions
+        # ete dir e uremn
+        #permissions = Directory.permissions
+        
         if re.match(r"^[0-7]{3}$", mode):
             new_permissions = self.apply_octal_mode(permissions, mode)
             if new_permissions is not None:
-                file.permissions = new_permissions
-                print(f"Permissions updated: {file.permissions}")
+                #ete file a uremn es
+                File.permissions = new_permissions
+                print(f"Permissions updated: -{File.permissions}")
             else:
                 print("Invalid octal mode.")
+                # ete file che uremn stex
+
         else:
             new_permissions = self.apply_symbolic_mode(permissions, mode)
             if new_permissions is not None:
-                file.permissions = new_permissions
-                print(f"Permissions updated: {file.permissions}")
+                File.permissions = new_permissions
+                print(f"Permissions updated: {File.permissions}")
             else:
                 print("Invalid mode.")
 
@@ -305,6 +310,7 @@ class Terminal:
             if file.name == filename:
                 return file
         return None
+        
 
     def apply_octal_mode(self, permissions, mode):
         user_mode = mode[0]
