@@ -116,7 +116,7 @@ class Terminal:
 
     def pwd(self):
         path = self.get_current_directory_path()
-        print(path)
+        print('/'+path)
 
     def get_current_directory_path(self):
         path = ""
