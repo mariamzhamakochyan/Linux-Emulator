@@ -1,10 +1,10 @@
 # Linux-Emulator
+vim
 ls, ls -l 
 cd
 pwd
 mkdir 
 touch
-vim
 chmod 
 cat
 sort
