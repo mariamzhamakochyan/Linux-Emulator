@@ -966,6 +966,7 @@ class Terminal:
         current_question_index = 1
         command = ''
         print('You got this! Crush that exam!')
+        print("Before starting the exam, please ensure that you are in the root directory represented by '/'.")
 
         start_command = input("Type 'start' to begin the exam: ")
         if start_command.lower() == "start":
@@ -1001,7 +1002,7 @@ class Terminal:
             grade = f"{correct_answers}/{len(answers)}"
             print("Grade:", grade)
         else:
-            print("Exam not started. Good luck!")
+            print("Exam not started.")
 
     def check_answers(self, answers):
         correct_answers = 0
