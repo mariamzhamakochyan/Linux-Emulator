@@ -49,5 +49,11 @@ The terminal emulator supports the following commands:
 - `man <command>`: Display the manual page for a command.
 - `whoami`: Display the current user.
 - `mv <source> <destination>`: Move or rename a file or directory.
+- `vim <filename>`: Open a file in the Vim text editor.
+- `echo <message>`: Print a message to the terminal.
 - `clear`: Clear the terminal screen.
 - `exam`: Enter exam mode to take a test.
+
+## Contributing
+
+Contributions to the terminal emulator project are welcome! If you find any issues or have suggestions for improvements, please create a new issue or submit a pull request.
