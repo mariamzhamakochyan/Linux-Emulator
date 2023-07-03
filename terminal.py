@@ -299,6 +299,12 @@ class Terminal:
         elif command == "whoami":
             print("whoami - Print the current user.")
             print("Usage: whoami")
+        elif command == "clear":
+            print("clear - Clear the terminal screen.")
+            print("Usage: clear")
+            print()
+            print("Clears the contents of the terminal screen and moves the cursor to the top-left corner.")
+            print("This provides a clean slate for displaying new output and improves readability.")
         elif command == "cal":
             print("cal - Display a calendar for the current month.")
             print("Usage: cal")
