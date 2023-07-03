@@ -53,3 +53,13 @@ The terminal emulator supports the following commands:
 - `echo <message>`: Print a message to the terminal.
 - `clear`: Clear the terminal screen.
 - `exam`: Enter exam mode to take a test.
+
+## Contributing
+
+Contributions to the terminal emulator project are highly appreciated! If you encounter any issues, have ideas for improvements, or want to add new features, please consider contributing. You can contribute in the following ways:
+
+1. **Report Issues**: If you come across any bugs or problems while using the terminal emulator, please create a new issue on the [mariamzhamakochyan](https://github.com/mariamzhamakochyan/Linux-Emulator.git/issues) with a detailed description.
+
+2. **Submit Pull Requests**: If you have code changes or enhancements to the terminal emulator, feel free to submit a pull request. Your contributions will be reviewed, and if everything looks good, they will be merged into the project.
+
+3. **Feedback and Suggestions**: Your feedback and suggestions are valuable! Feel free to open an issue or join discussions on existing topics.
