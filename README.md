@@ -11,6 +11,7 @@
 - Symbolic and hard linking: Users can create symbolic and hard links between files and directories using the `ln` command.
 - SSH server connection: Users can connect to a remote server using the `ssh` command.
 - Additional commands: The terminal emulator also supports additional commands such as `cat`, `sort`, `uniq`, `grep`, `wc`, `head`, `tail`, `tee` (and `>`), `cp`, `cal`, `date`, `man`, `whoami`, `mv`, and `rm`.
+- Clearing the terminal screen using `clean`
 - Exam mode: Students can take a test using the built-in exam mode by typing `exam`.
 
 ## Usage
@@ -48,4 +49,5 @@ The terminal emulator supports the following commands:
 - `man <command>`: Display the manual page for a command.
 - `whoami`: Display the current user.
 - `mv <source> <destination>`: Move or rename a file or directory.
+- `clear`: Clear the terminal screen.
 - `exam`: Enter exam mode to take a test.

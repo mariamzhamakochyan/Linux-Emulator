@@ -19,7 +19,7 @@ class Terminal:
     def run_command(self, command):
         command_parts = command.split()
         if not command_parts:
-            return
+            pass
         elif command_parts[0] == 'done':
             pass
         elif command_parts[0] == "ls":
@@ -35,8 +35,9 @@ class Terminal:
                 self.cd(command_parts[1])
             else:
                 self.cd()
+        elif command == "clear":
+            self.clear()
         elif command_parts[0] == "rmdir":
-            # Handle rmdir command
             if len(command_parts) < 2:
                 print("Invalid command.")
             else:
@@ -200,6 +201,10 @@ class Terminal:
                 print(f"-{permissions}\t{self.owner}\t{creation_date}\t{file.name}")
             else:
                 print(file.name)
+                
+    def clear(self):
+        print("\033[2J\033[H", end='')
+
 
     def cd(self, directory=None):
         if directory is None or directory == "":
