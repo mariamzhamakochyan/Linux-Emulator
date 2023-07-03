@@ -966,10 +966,11 @@ class Terminal:
         current_question_index = 1
         command = ''
         print('You got this! Crush that exam!')
-        print("Before starting the exam, please ensure that you are in the root directory represented by '/'.")
 
         start_command = input("Type 'start' to begin the exam: ")
         if start_command.lower() == "start":
+            print()
+            print("Before starting the exam, please ensure that you are in the root directory represented by '/'.")
             print(' -----------------------------------------------------------------------------------------------------')
             print("|   If you have finished answering the question, please type 'done' to proceed to the next question.  |")
             print(' -----------------------------------------------------------------------------------------------------')
