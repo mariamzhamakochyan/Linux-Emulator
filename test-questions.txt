@@ -1,0 +1,11 @@
+Question 1: Make a directory named "hello".
+Question 2: Create a file named "world.txt" inside the "hello" directory.
+Question 3: Change the permissions of the "world.txt" file to "-rwxrw-r--" using OCTAL mode.
+Question 4: Open print working directory command's manual page, copy the output, and past that output inside world.txt file
+Question 5: Create a folder inside the "hello" folder and name it "folder1". Inside that folder, create a file named "file1.txt". Use a command to calculate the number of words, lines, and characters in the "world.txt" file. Then, within the "file1.txt" file, write ONLY the number of characters.
+Question 6: Change file1.txt  name to new_file.txt
+Question 7: Create a file named "root_file.txt" in the root directory, inside that file writ the command name with wich you can search for matching patterns in a file.Then move "root_file.txt" file inside the "hello" folder.
+Question 8: Create a hard link for the "root_file.txt" file inside the "folder1" folder.
+Question 9: In the hello directory, create a folder named "home". Inside the "home" folder, create three folders named "dir1", "dir2", and "dir3". Additionally, create two files named "file1" and "file2" within the "home" folder. Then, remove the "hello" folder along with all its contents.
+Question 10: Connect to a server at 192.168.1.2 using the username "test" and password "1111". Create a folder named "user". After disconnecting, please remember to type "done" to see your grade.
+ 
