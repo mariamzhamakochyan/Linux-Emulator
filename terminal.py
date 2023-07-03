@@ -14,6 +14,7 @@ class Terminal:
         self.server_ip = '192.168.1.2'
         self.server_username = 'test'
         self.server_password = '1111'
+        self.ssh_command_used = False
 
 
     def run_command(self, command):
@@ -117,6 +118,8 @@ class Terminal:
             target_path = command_parts[2]
             self.mv(source_path, target_path)
         elif command_parts[0] == "ssh":
+            self.ssh_command_used = self.check_ssh_command(command)
+
             if len(command_parts) != 2:
                 print("Invalid ssh command. Usage: ssh serverusername@ipaddress")
             else:
@@ -1100,10 +1103,8 @@ class Terminal:
                 return True
             return False
         if question_index == '10':
-            if answer.strip() == 'ssh test@192.168.1.2':
-                return True
-            else:
-                return False
+            return self.check_ssh_command()
+
 
     def find_item_in_directory(self, directory, path):
         path_parts = path.split("/")
@@ -1125,9 +1126,12 @@ class Terminal:
                         if file.name == part:
                             return file
                     return None
-
         return current_directory
-
+    
+    def check_ssh_command(self, command=None):
+        expected_command = "ssh test@192.168.1.2"
+        return command == expected_command
+    
 class SSHServer(Terminal, File, Directory):
     def __init__(self, address, username, password):
         super().__init__()
