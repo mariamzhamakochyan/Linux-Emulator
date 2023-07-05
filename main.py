@@ -3,7 +3,7 @@ from terminal import Terminal
 def main():
     terminal = Terminal()
     print(' -----------------------------------------------------------------------------------------')
-    print("|                                Welcom to Linux Emulator                                 |")
+    print("|                                Welcome to Linux Emulator                                 |")
     print(' -----------------------------------------------------------------------------------------')
     print("| . Now you are in the regular mode.                                                      |")
     print("| . If you want to start the exam, please choose the exam mode by typing just 'exam'      |")
