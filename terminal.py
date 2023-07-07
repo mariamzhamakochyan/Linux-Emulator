@@ -217,6 +217,9 @@ class Terminal:
                 self.current_directory = self.current_directory.parent
         elif directory == "./":
             return
+        elif directory == "../":
+            if self.current_directory.parent:
+                self.current_directory = self.current_directory.parent
         elif directory.startswith("./"):
             directory = directory[2:]
             self.cd(directory)
