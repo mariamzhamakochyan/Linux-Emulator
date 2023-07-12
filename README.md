@@ -2,6 +2,9 @@
 
 "This project is a terminal emulator that simulates the behavior of a command-line interface and provides an exam environment. It allows users to navigate through directories, create and delete files and directories, change permissions, and perform various other operations, while also offering a dedicated exam mode for students to take tests."
 
+![alt text](screenshots/linux-emulator-screenshot.png)
+
+
 ## Features
 
 - Directory navigation: Users can navigate through directories using commands like `cd`, `ls`, and `pwd`.
