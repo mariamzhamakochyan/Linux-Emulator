@@ -4,6 +4,7 @@
 
 ![alt text](screenshots/linux-emulator-screenshot.png)
 
+![alt text](screenshots/exam-example.png)
 
 ## Features
 
